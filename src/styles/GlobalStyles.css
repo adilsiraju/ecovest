@@ -1,0 +1,184 @@
+:root {
+  /* Modern color palette inspired by nature and sustainability */
+  --primary: #1C1C1C;
+  --secondary: #34C759;
+  --accent: #00E676;
+  --background: #F8FAF5;
+  --background-dark: #ECF1EA;
+  --text: #1C1C1C;
+  --text-light: #6B7C93;
+  
+  /* New nature-inspired colors */
+  --leaf-green: #4CAF50;
+  --moss: #8BC34A;
+  --forest: #2E7D32;
+  --earth: #795548;
+  --sand: #F4EAD5;
+  --sky: #E8F5E9;
+  
+  /* Updated gradients */
+  --gradient-1: linear-gradient(135deg, #34C759 0%, #2AB090 100%);
+  --gradient-2: linear-gradient(135deg, #1C1C1C 0%, #2C3E50 100%);
+  --gradient-nature: linear-gradient(135deg, var(--leaf-green) 0%, var(--moss) 100%);
+  --gradient-earth: linear-gradient(135deg, var(--earth) 0%, var(--forest) 100%);
+  
+  /* Card and section backgrounds */
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --card-hover: var(--sky);
+  --section-bg: var(--sand);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 5vw, 24px);
+}
+
+/* Modern button styling */
+.button {
+  padding: clamp(14px, 4vw, 16px) clamp(24px, 6vw, 32px);
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 48px; /* Ensure minimum touch target size */
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.button:hover::after {
+  opacity: 1;
+}
+
+.button-primary {
+  background: var(--gradient-1);
+  color: white;
+  box-shadow: 0 4px 16px rgba(52, 199, 89, 0.3);
+}
+
+.button-secondary {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  backdrop-filter: blur(8px);
+}
+
+/* Modern card styling */
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  border-radius: 24px;
+  padding: clamp(24px, 5vw, 32px);
+  box-shadow: var(--shadow);
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background: var(--card-bg-hover);
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(40px, 8vw, 80px);
+  background: var(--gradient-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Glass morphism effects */
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Modern grid layouts */
+.grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Responsive spacing */
+.section {
+  padding: clamp(60px, 10vw, 120px) 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text);
+}
+
+html {
+  font-size: 16px;
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+  scroll-behavior: smooth;
+} 
