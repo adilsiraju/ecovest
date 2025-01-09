@@ -1,6 +1,8 @@
 # EcoVest - Sustainable Investment Platform
 
 EcoVest is a modern web application that connects conscious investors with sustainable projects, making eco-friendly investing accessible and impactful.
+![Ecovest Landing](https://github.com/user-attachments/assets/4f3b5658-c955-4dce-bf27-0a30b4189221)
+
 
 ## Features
 
