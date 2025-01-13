@@ -6,11 +6,12 @@ import HomeContent from './components/HomeContent';
 import Footer from './components/Footer';
 import Features from './pages/Features';
 import About from './pages/About';
+import Invest from './pages/Invest';
 import Contact from './pages/Contact';
 import './styles/GlobalStyles.css';
 import styled from '@emotion/styled';
 
-const Invest = () => <div>Invest Page</div>;
+// const Invest = () => <div>Invest Page</div>;
 
 const Home = () => (
   <>
